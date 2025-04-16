@@ -19,7 +19,8 @@
 
 body {
     font-family: 'Comic Neue', cursive, sans-serif;
-    background: url('../Img/ImgFundo.webp') no-repeat center center fixed;
+    background: url('Digitalnidade/Img
+/ImgFundo.webp') no-repeat center center fixed;
     background-size: cover;
     color: var(--cor-texto);
     line-height: 1.6;
