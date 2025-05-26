@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DigitalNidade: Projeto de cibersegurança para crianças, pais e professores">
+    <title>DigitalNidade - Cibersegurança para Todos</title>
+    <link rel="stylesheet" href="../Site/Css/estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<div class="modal-overlay" id="thankyouModal">
+    <div class="modal-content">
+        <img src="../Site/Img/obrigado.png" alt="Obrigado por visitar!">
+        <button class="close-btn" onclick="fecharModal()">Fechar</button>
+    </div>
+</div>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Site/Img/logo.png" alt="Logo DigitalNidade - Heróis da Cibersegurança">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#alunos">Alunos</a></li>
+                <li><a href="#pais">Pais</a></li>
+                <li><a href="#mural">Mural</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Seção Inicial -->
+        <section id="home" class="section hero-section">
+            <h1>Bem-vindo ao DigitalNidade!</h1>
+            <p class="destaque">Aprenda a ser um herói da cibersegurança!</p>
+            <div class="hero-content">
+                <img src="../Site/Img/Problems.png" alt="Personagem Minecraft com escudo de cibersegurança" class="hero-image">
+                <div>
+                    <p>No mundo digital, assim como no Minecraft, existem perigos escondidos. Vamos aprender a nos proteger!</p>
+                    <a href="#alunos" class="btn destaque-animado">Comece sua aventura</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção para Alunos -->
+        <section id="alunos" class="section">
+            <h2><span class="icon">🧒</span> Para Alunos</h2>
+            <div class="conceitos">
+                <h3>Conceitos Básicos:</h3>
+                <ul class="conceitos-list">
+                    <li>
+                        <h4>Senhas Fortes</h4>
+                        <p>Senhas são como portas secretas no Minecraft. Elas devem ser difíceis de adivinhar!</p>
+                        <div class="exemplo">
+                            <p class="destaque">Exemplo de senha forte: <code>Di@mant3#913</code></p>
+                        </div>
+                    </li>
+                    <li>
+                        <h4>Vírus de Software</h4>
+                        <p>São como monstros que podem entrar no seu computador quando você baixa arquivos de lugares estranhos.</p>
+                    </li>
+                    <li>
+                        <h4>Phishing</h4>
+                        <p>Quando alguém tenta enganar você para pegar suas informações secretas, como um lobo em pele de cordeiro.</p>
+                    </li>
+                    <li>
+                        <h4>Cyberbullying</h4>
+                        <p>Mensagens maldosas na internet machucam tanto quanto na vida real. Sempre conte para um adulto se isso acontecer.</p>
+                    </li>
+                </ul>
+                <div class="semanal">
+                    <div class="galeria-imagens">
+                        <div class="imagem-container">
+                            <img src="../Site/Img/1.jpg" alt="Explicação sobre cibersegurança">
+                        </div>
+                        <div class="imagem-container">
+                            <img src="../Site/Img/2.jpg" alt="Como criar senha segura">
+                        </div>
+                        <div class="imagem-container">
+                            <img src="../Site/Img/3.jpg" alt="Dica de segurança">
+                        </div>
+                        <div class="imagem-container">
+                            <img src="../Site/Img/4.jpg" alt="Dica de segurança">
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Jogos e Quizzes</h3>
+                <div class="quiz-container">
+                    <button onclick="mostrarQuiz('alunos1')" class="btn quiz-btn">Iniciar Quiz de Segurança</button>
+                    <div id="alunos1" class="quiz-content escondido">
+                        <div class="quiz-pergunta">
+                            <p>Pergunta 1: O que é uma senha segura?</p>
+                            <p class="dica">Dica: Uma senha boa é como um baú secreto no Minecraft - difícil de abrir!</p>
+                            <div class="quiz-opcoes">
+                                <button onclick="verificarResposta(this, false)" class="btn-opcao">A) 123456</button>
+                                <button onclick="verificarResposta(this, true)" class="btn-opcao">B) @SenhaForte123</button>
+                            </div>
+                            
+                            <p id="feedback-alunos1" class="feedback"></p>
+                        </div>
+                        <a href="https://beinternetawesome.withgoogle.com/pt-br_br/interland" target="_blank" rel="noopener noreferrer">
+  <button style="padding: 10px 20px; font-size: 16px; background-color: #4285F4; color: white; border: none; border-radius: 4px;">
+    Jogar Interland
+  </button>
+</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Pais -->
+<section id="pais" class="section">
+    <h2><span class="icon">👪</span> Para Pais</h2>
+    <div class="aviso">
+        <h3>Como proteger sua família online</h3>
+        <div class="dica-container">
+            <!-- Dica 1: Senhas Fortes -->
+            <div class="dica-item">
+                <div class="dica-img">
+                    <img src="../Site/Img/Senha.PNG" alt="Ilustração de senhas seguras">
+                </div>
+                <h4>Senhas Fortes</h4>
+                <p>Use senhas diferentes para cada conta e considere um gerenciador de senhas.</p>
+            </div>
+
+            <!-- Dica 2: Controle Parental -->
+            <div class="dica-item">
+                <div class="dica-img">
+                    <img src="../Site/Img/Controle.PNG" alt="Ilustração de controle parental">
+                </div>
+                <h4>Controle Parental</h4>
+                <p>Ative filtros de conteúdo e monitore o tempo de tela:</p>
+                <ul class="lista-checks">
+                    <li>Configure restrições por idade</li>
+                    <li>Bloqueie sites inadequados</li>
+                    <li>Defina horários de uso</li>
+                </ul>
+            </div>
+
+            <!-- Dica 3: Wi-Fi Público -->
+            <div class="dica-item">
+                <div class="dica-img">
+                    <img src="../Site/Img/WifiP.PNG" alt="Ilustração de Wi-Fi público seguro">
+                </div>
+                <h4>Cuidado com Wi-Fi Público</h4>
+                <p>Ao conectar-se a redes públicas, evite acessar dados sensíveis para prevenir invasões.</p>
+            </div>
+
+            <!-- Dica 4: Autenticação em Dois Fatores -->
+            <div class="dica-item">
+                <div class="dica-img">
+                    <img src="../Site/Img/Fatores.PNG" alt="Ilustração de autenticação em dois fatores">
+                </div>
+                <h4>Autenticação de Dois Fatores</h4>
+                <p>Sempre habilite a verificação em duas etapas para maior segurança.</p>
+            </div>
+
+            <!-- Dica 5: Phishing -->
+            <div class="dica-item">
+                <div class="dica-img">
+                    <img src="../Site/Img/phishing.jpg" alt="Ilustração de phishing">
+                </div>
+                <h4>Phishing</h4>
+                <p>Ensine seus filhos a não clicar em links suspeitos ou fornecer informações pessoais.</p>
+            </div>
+
+            <!-- Dica 6: Backup -->
+            <div class="dica-item">
+                <div class="dica-img">
+                    <img src="../Site/Img/Backup.PNG" alt="Ilustração de backup de dados">
+                </div>
+                <h4>Backup</h4>
+                <p>Mantenha cópias seguras dos seus dados para evitar perdas por vírus.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Seção Mural -->
+        <section id="mural" class="section">
+            <h2><span class="icon">📌</span> Mural Digital</h2>
+            <div class="mural-container">
+                <div class="mural-item destaque">
+                    <h3>Dica da Semana</h3>
+                    <p>Nunca compartilhe suas informações pessoais online! É como gritar sua localização no Minecraft para estranhos.</p>
+                </div>
+                
+                <div class="mural-item">
+                    <h3>Desafio de Segurança</h3>
+                    <p>Crie uma senha super segura e desenhe um escudo para protegê-la. Traga seu desenho para a sala!</p>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+            
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <img src="../Site/Img/logo.png" alt="DigitalNidade">
+                <p>Promovendo segurança digital para toda a comunidade escolar</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Termos de Uso</a>
+                <a href="#">Política de Privacidade</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 DigitalNidade. Todos os direitos reservados.</p>
+    </footer>
+    
+    <script src="../Site/script.js"></script>
+</body>
+</html>
