@@ -25,6 +25,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+body {
+  font-size: 18px; /* ou até 20px */
+  line-height: 1.6;
+}
 
 /* HEADER */
 header {
