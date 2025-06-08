@@ -18,16 +18,13 @@
 /* Fonte base */
 body {
   font-family: "Verdana", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 1.6;
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
-  line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-}
-body {
-  font-size: 18px; /* ou até 20px */
-  line-height: 1.6;
 }
 
 /* HEADER */
