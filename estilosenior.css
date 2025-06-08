@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cores */
+:root {
+  --cor-primaria: #1877f2;
+  --cor-secundaria: #1b74e4;
+  --cor-fundo: #f1f2f3;
+  --cor-texto: #222;
+  --cor-texto-claro: #555;
+  --cor-branco: #fff;
+}
+
+/* Fonte base */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-branco);
+  padding: 0.8rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.logo img {
+  height: 60px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+/* Navegação */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: var(--cor-branco);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  border: 2px solid var(--cor-branco);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria);
+  outline: none;
+}
+
+/* MAIN */
+main {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dica-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Cada dica */
+.dica-item {
+  background-color: var(--cor-branco);
+  padding: 1.2rem 1.6rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.dica-item:hover {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.dica-item h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  color: var(--cor-primaria);
+  margin-bottom: 0.6rem;
+}
+
+.icon {
+  font-size: 1.6rem;
+}
+
+/* Texto das dicas */
+.dica-item p {
+  font-size: 1rem;
+  color: var(--cor-texto-claro);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 1rem 2rem;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,0.2);
+  margin-top: 2rem;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  nav ul {
+    gap: 0.8rem;
+  }
+
+  nav ul li a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .dica-item h2 {
+    font-size: 1.1rem;
+  }
+}
+body {
+  background: url('./img/fundoSenior.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Comic Neue', cursive, sans-serif;
+  color: var(--cor-texto);
+}
