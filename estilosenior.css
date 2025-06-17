@@ -1,0 +1,166 @@
+/* Paleta de cores */
+:root {
+  --cor-primaria: #0077b6;
+  --cor-secundaria: #00b4d8;
+  --cor-branco: #ffffff;
+  --cor-preto: #333333;
+  --cor-cinza: #f1f1f1;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-cinza);
+  color: var(--cor-preto);
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(90deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-branco);
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.container-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem 1rem;
+  border: 2px solid var(--cor-branco);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: var(--cor-branco);
+  color: var(--cor-primaria);
+}
+
+/* Seções */
+.section {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+}
+
+.section h2 {
+  margin-bottom: 1rem;
+  color: var(--cor-primaria);
+  font-size: 2rem;
+}
+
+.section h3 {
+  margin: 0.8rem 0;
+}
+
+/* Dicas */
+.dicas-section .dica-item {
+  background-color: var(--cor-branco);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.dica-img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Contato */
+.contato-info {
+  margin-bottom: 1.5rem;
+}
+
+.contato-info a {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contato-form input,
+.contato-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.contato-form button {
+  padding: 0.8rem;
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contato-form button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* Footer */
+footer {
+  background-color: var(--cor-primaria);
+  color: var(--cor-branco);
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .container-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
